@@ -39,7 +39,7 @@ function draw() {
       // count tiles
       var counter = 0;
       // row count and row height
-      var rowCount = int(map(volAmp,0,20,0,volAmp*2));
+      var rowCount = int(map(volAmp,0,20,0,volAmp*3));
       var rowHeight = -height/rowCount;
       print(rowHeight);
 
@@ -54,12 +54,12 @@ function draw() {
           // // sub fragments or not?
           if (random(1.0) < 0.075) {
             // take care of big values      
-            var fragments = int(random(2,20));
+            var fragments = int(random(2,22));
             partCount = partCount + fragments; 
             for(var iii=0; iii<fragments; iii++) {
               parts = append(parts, random(2));
             }   
-            frameRate(volAmp)*2;
+           // frameRate(volAmp)*2;
            
           }  
           else {
@@ -103,7 +103,7 @@ function coinFlip() { //selects color
   var n2= noise(frameCount*20)*100;
 
 	if (flip < 50) {
-		fill(238);
+		fill(112);
 	} else {
 		fill(0);
 	}
